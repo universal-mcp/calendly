@@ -1,23 +1,11 @@
-
 # Calendly MCP Server
 
 An MCP Server for the Calendly API.
 
-## Supported Integrations
-
-- AgentR
-- API Key (Coming Soon)
-- OAuth (Coming Soon)
-
-## Tools
+## 🛠️ Tool List
 
 This is automatically generated from OpenAPI schema for the Calendly API.
 
-## Supported Integrations
-
-This tool can be integrated with any service that supports HTTP requests.
-
-## Tool List
 
 | Tool | Description |
 |------|-------------|
@@ -63,15 +51,3 @@ This tool can be integrated with any service that supports HTTP requests.
 | `list_event_type_hosts` | Retrieves a list of event type hosts based on provided filter, count, and pagination parameters. |
 | `create_one_off_event_type` | Creates a one-off event type with configurable parameters and returns details of the created event. |
 | `get_sample_webhook_data` | Retrieves sample webhook data from the API using optional query parameters for event, organization, user, and scope filtering. |
-| `list_tools` | Returns a list of method references for various event, user, group, organization, and webhook operations supported by this instance. |
-
-## Usage
-
-- Login to AgentR
-- Follow the quickstart guide to setup MCP Server for your client
-- Visit Apps Store and enable the Calendly app
-- Restart the MCP Server
-
-### Local Development
-
-- Follow the README to test with the local MCP Server
