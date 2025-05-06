@@ -9,45 +9,45 @@ This is automatically generated from OpenAPI schema for the Calendly API.
 
 | Tool | Description |
 |------|-------------|
-| `list_event_invitees` | Retrieves a list of invitees for a specific scheduled event with optional filtering and pagination support. |
-| `get_event` | Retrieves the details of a scheduled event using its unique identifier. |
-| `get_event_invitee` | Retrieves details about a specific invitee for a given scheduled event. |
-| `list_events` | Retrieves a list of scheduled events based on specified filters such as user, organization, invitee email, status, date range, sorting, and pagination criteria. |
-| `get_event_type` | Retrieves the event type details for the specified UUID from the API. |
-| `list_user_sevent_types` | Retrieves a paginated list of user event types with optional filtering, sorting, and pagination parameters. |
-| `get_user` | Retrieves detailed user information for a specified UUID from a remote API. |
-| `get_current_user` | Retrieves information about the currently authenticated user from the API. |
-| `list_organization_invitations` | Retrieves a paginated list of invitations for a specified organization with optional filtering, sorting, and pagination. |
-| `invite_user_to_organization` | Sends an invitation to a specified email address to join an organization identified by its UUID. |
-| `get_organization_invitation` | Retrieves a specific invitation for an organization using its unique identifiers. |
-| `revoke_user_sorganization_invitation` | Revokes a user's invitation to an organization by deleting the specified invitation resource. |
-| `get_organization_membership` | Retrieves the membership information for a specified organization membership UUID. |
-| `remove_user_from_organization` | Removes a user from the organization by deleting their membership using the specified UUID |
-| `list_organization_memberships` | Retrieves a list of organization memberships with optional filtering by pagination, email, organization, or user parameters. |
-| `get_webhook_subscription` | Retrieves the details of a webhook subscription identified by its UUID. |
-| `delete_webhook_subscription` | Deletes a webhook subscription identified by its UUID from the server using the provided UUID. |
-| `list_webhook_subscriptions` | Retrieves a paginated list of webhook subscriptions with optional filtering parameters. |
-| `create_webhook_subscription` | Creates a new webhook subscription with customizable parameters and returns its configuration details. |
-| `create_single_use_scheduling_link` | Creates a single-use scheduling link by sending a POST request with optional restrictions. |
-| `delete_invitee_data` | Deletes invitee data for specified email addresses by sending a POST request to the data compliance API. |
-| `delete_scheduled_event_data` | Deletes scheduled event data within the specified time range by sending a deletion request to the data compliance service. |
-| `get_invitee_no_show` | Retrieves details about an invitee who did not show up for a scheduled event, identified by a unique UUID. |
-| `delete_invitee_no_show` | Deletes an invitee no-show record identified by the given UUID. |
-| `create_invitee_no_show` | Creates an invitee no-show record via POST request to the invitee_no_shows endpoint. |
-| `get_group` | Retrieves a group's details from the server by its UUID. |
-| `list_groups` | Retrieves a paginated list of groups from the API, optionally filtered by organization. |
-| `get_group_relationship` | Retrieves the relationship information for a group by UUID from the API. |
-| `list_group_relationships` | Retrieves paginated group relationships from the server with optional filtering parameters. |
-| `get_routing_form` | Retrieves a specific routing form by its unique identifier from the server. |
-| `list_routing_forms` | Retrieves a paginated list of routing forms from the API with optional filtering, sorting, and pagination. |
-| `get_routing_form_submission` | Retrieves a routing form submission by its unique identifier (UUID) from the configured API endpoint. |
-| `list_routing_form_submissions` | Retrieves a list of routing form submissions with optional filtering and pagination. |
-| `list_event_type_available_times` | Retrieves available scheduling times for specified event types within an optional datetime range. |
-| `list_activity_log_entries` | Retrieves a list of activity log entries with optional filtering, sorting, and pagination. |
-| `create_share` | Creates a new share with specified configuration by sending a POST request to the shares API endpoint. |
-| `list_user_busy_times` | Retrieves a list of busy time intervals for specified users within an optional date range. |
-| `get_user_availability_schedule` | Retrieves the availability schedule for a user identified by the given UUID. |
-| `list_user_availability_schedules` | Retrieves user availability schedules from the API, optionally filtered by a specific user identifier. |
-| `list_event_type_hosts` | Retrieves a list of event type hosts based on provided filter, count, and pagination parameters. |
-| `create_one_off_event_type` | Creates a one-off event type with configurable parameters and returns details of the created event. |
-| `get_sample_webhook_data` | Retrieves sample webhook data from the API using optional query parameters for event, organization, user, and scope filtering. |
+| `list_event_invitees` | Retrieves a paginated list of invitees for a specific scheduled event with optional filtering by status, email, and sorting parameters. |
+| `get_event` | Retrieves details about a scheduled event identified by the provided UUID using the GET method. |
+| `get_event_invitee` | Retrieves detailed information about a specific invitee for a scheduled event using their unique identifiers. |
+| `list_events` | Retrieves a list of scheduled events filtered by user, organization, invitee, status, time range, and other parameters, supporting pagination and sorting. |
+| `get_event_type` | Retrieves the details of a specific event type identified by its UUID using the path "/event_types/{uuid}" and the GET method. |
+| `list_user_sevent_types` | Retrieves a list of event types based on active status, organization, user, availability schedule, sorting, and pagination. |
+| `get_user` | Retrieves a user's details by their unique identifier (UUID) and returns the user data. |
+| `get_current_user` | Retrieves information about the current user using the API. |
+| `list_organization_invitations` | Retrieves a list of invitations for an organization identified by its UUID, allowing filtering by count, page token, sort order, email, and invitation status. |
+| `invite_user_to_organization` | Creates an invitation for a user to join an organization, identified by the provided UUID, and sends it to the specified recipient. |
+| `get_organization_invitation` | Retrieves information about an organization invitation identified by its UUID, returning details about the invitation using the specified organization UUID and invitation UUID. |
+| `revoke_user_sorganization_invitation` | Deletes one or more organization invitations and returns success or error codes indicating invalid tokens, missing invitations, or authorization issues. |
+| `get_organization_membership` | Retrieves details of a specific organization membership using its unique identifier. |
+| `remove_user_from_organization` | Removes a user from an organization using the specified UUID and returns a success status if the operation is completed without errors. |
+| `list_organization_memberships` | Retrieves and lists organization memberships for specified users or organizations, supporting filtering by user, organization, and other criteria, using the "GET" method at the "/organization_memberships" path. |
+| `get_webhook_subscription` | Retrieves the details of a webhook subscription identified by the specified `webhook_uuid`, returning relevant subscription information in response. |
+| `delete_webhook_subscription` | Deletes a webhook subscription identified by its unique UUID and returns a success response upon completion. |
+| `list_webhook_subscriptions` | Retrieves a paginated list of webhook subscriptions filtered by organization, user, and scope, with options for sorting and count. |
+| `create_webhook_subscription` | Creates a new webhook subscription to receive notifications for specified events from a Squarespace website. |
+| `create_single_use_scheduling_link` | Creates a new scheduling link using the "POST" method at the "/scheduling_links" path, allowing users to generate customized links for scheduling events. |
+| `delete_invitee_data` | Initiates data deletion requests for invitees in compliance with data privacy regulations. |
+| `delete_scheduled_event_data` | Submits data deletion requests for compliance events and returns asynchronous processing confirmation. |
+| `get_invitee_no_show` | Retrieves information about an invitee who did not show up, identified by a specific UUID, using the GET method via the API endpoint "/invitee_no_shows/{uuid}". |
+| `delete_invitee_no_show` | Removes an invitee's "no-show" status using their unique identifier (uuid) and returns an empty response upon successful deletion. |
+| `create_invitee_no_show` | Triggers an action related to invitee no-shows using the POST method at the "/invitee_no_shows" endpoint, returning a status message based on the response codes provided. |
+| `get_group` | Retrieves information about a group specified by its UUID from the API. |
+| `list_groups` | Retrieves a list of groups for a specified organization using the GitHub API, with optional pagination controls. |
+| `get_group_relationship` | Retrieves information about group relationships identified by the specified UUID using the GET method. |
+| `list_group_relationships` | Retrieves a list of group relationships filtered by organization, owner, or group, using pagination parameters for controlled results. |
+| `get_routing_form` | Retrieves a routing form by its unique identifier (UUID) using the GET method via the "/routing_forms/{uuid}" path. |
+| `list_routing_forms` | Retrieves a list of routing forms for a specified organization with pagination, sorting, and count parameters. |
+| `get_routing_form_submission` | Retrieves a specific routing form submission by its unique identifier (UUID) using the Calendly API. |
+| `list_routing_form_submissions` | Retrieves routing form submissions using the GET method at "/routing_form_submissions", allowing filtering by form, count, page token, and sort order. |
+| `list_event_type_available_times` | Retrieves a list of available times for a specified event type within a given date range, using the event type, start time, and end time as query parameters. |
+| `list_activity_log_entries` | Retrieves filtered activity log entries based on parameters like organization, actor, timestamps, and action, supporting sorting and pagination. |
+| `create_share` | Creates a new share resource and returns a status message. |
+| `list_user_busy_times` | Retrieves an ascending list of a user's internal and external scheduled events within a specified date range using the "/user_busy_times" endpoint, allowing for efficient management of busy times. |
+| `get_user_availability_schedule` | Retrieves the availability schedule of a user based on the provided UUID using the GET method. |
+| `list_user_availability_schedules` | Retrieves the availability schedule for a specified user, including time intervals when booking is permitted. |
+| `list_event_type_hosts` | Retrieves paginated event type memberships filtered by event type, count, and page token. |
+| `create_one_off_event_type` | Creates a one-off event type using the "POST" method, allowing for the setup of a single, unique event configuration. |
+| `get_sample_webhook_data` | Retrieves sample webhook data filtered by event type, organization, user, and scope parameters. |
