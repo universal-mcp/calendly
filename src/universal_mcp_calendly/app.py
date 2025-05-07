@@ -23,7 +23,7 @@ class CalendlyApp(APIApplication):
             dict[str, Any]: OK
 
         Tags:
-            scheduled_events, {uuid}, invitees
+            scheduled_events, {uuid}, invitees, important
         """
         if uuid is None:
             raise ValueError("Missing required parameter 'uuid'")
@@ -44,7 +44,7 @@ class CalendlyApp(APIApplication):
             dict[str, Any]: OK
 
         Tags:
-            scheduled_events, {uuid}
+            scheduled_events, important
         """
         if uuid is None:
             raise ValueError("Missing required parameter 'uuid'")
@@ -100,7 +100,7 @@ class CalendlyApp(APIApplication):
             dict[str, Any]: OK
 
         Tags:
-            scheduled_events
+            scheduled_events, important
         """
         url = f"{self.base_url}/scheduled_events"
         query_params = {k: v for k, v in [('user', user), ('organization', organization), ('invitee_email', invitee_email), ('status', status), ('sort', sort), ('min_start_time', min_start_time), ('max_start_time', max_start_time), ('page_token', page_token), ('count', count), ('group', group)] if v is not None}
@@ -184,7 +184,7 @@ class CalendlyApp(APIApplication):
             dict[str, Any]: OK
 
         Tags:
-            users, me
+            users, me, important
         """
         url = f"{self.base_url}/users/me"
         query_params = {}
